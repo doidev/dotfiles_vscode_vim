@@ -56,7 +56,7 @@
   "gitlens.mode.active": "zen",
   "liveServer.settings.donotShowInfoMsg": true,
   "update.showReleaseNotes": false,
-  "vim.easymotion": true, // <leader>m and <leader>M
+  "vim.easymotion": true, // <leader>m forward and <leader>M backward motion from the current cursor position 
   "vim.easymotionMarkerBackgroundColor": "#fff",
   "vim.easymotionMarkerForegroundColorOneChar": "#007",
   "vim.colorcolumn": "#f58",
@@ -293,7 +293,7 @@
   "vim.showmodename": true,
   "vim.smartRelativeLine": true,
   "vim.sneak": true, // type s then next 2 character for next find, type S for backward find 2 characters example ssu next match by press ;
-  "vim.surround": true, //ysiw" or cs"'
+  "vim.surround": true, // delete(ds), change (cs), add (y) sourround object. Example: ds" or ysiw" or cs"'. https://github.com/tpope/vim-surround 
   "vim.useCtrlKeys": true,
   "vim.useSystemClipboard": true,
   "vim.visualModeKeyBindingsNonRecursive": [
