@@ -1,0 +1,109 @@
+// Place your key bindings in this file to override the defaults
+[
+  // https://stackoverflow.com/questions/70561889/move-cursor-up-or-down-multiple-lines-at-once-in-vs-code
+  {
+    "args": {
+      "by": "line",
+      "to": "up",
+      "value": 12 // change this if you want
+    },
+    "command": "cursorMove",
+    "key": "shift+k", // whatever keybinding you want
+    "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+  },
+  {
+    "args": {
+      "by": "line",
+      "to": "down",
+      "value": 12 // change
+    },
+    "command": "cursorMove",
+    "key": "shift+j", // whatever keybinding you want
+    "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+  },
+  // change window left right
+  {
+    "command": "workbench.action.focusPreviousGroup",
+    "key": "ctrl+h",
+    "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+  },
+  {
+    "command": "workbench.action.focusNextGroup",
+    "key": "ctrl+l",
+    "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+  },
+  // NAVIGATION
+  {
+    "command": "workbench.action.terminal.focusNext",
+    "key": "ctrl+k",
+    "when": "terminalFocus"
+  },
+  {
+    "command": "workbench.action.togglePanel",
+    "key": "ctrl+j"
+  },
+  // FILE TREE
+  {
+    "command": "workbench.action.toggleSidebarVisibility",
+    "key": "alt+shift+e"
+  },
+  {
+    "command": "workbench.files.action.focusFilesExplorer",
+    "key": "alt+shift+e",
+    "when": "editorTextFocus"
+  },
+  {
+    "command": "explorer.newFile",
+    "key": "n",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "command": "renameFile",
+    "key": "r",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "command": "explorer.newFolder",
+    "key": "shift+n",
+    "when": "explorerViewletFocus"
+  },
+  {
+    "command": "workbench.action.newWindow",
+    "key": "shift+n",
+    "when": "!explorerViewletFocus"
+  },
+  {
+    "command": "deleteFile",
+    "key": "d",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  // search focus text and show list result to go down by press j keyboard
+  {
+    "args": {
+      "commands": [
+        "editor.action.clipboardCopyAction",
+        "workbench.view.search",
+        "editor.action.clipboardPasteAction",
+        "search.action.focusSearchList",
+        "list.focusDown"
+      ]
+    },
+    "command": "runCommands",
+    "key": "shift+alt+f",
+    "when": "editorTextFocus"
+  },
+  {
+    "args": {
+      "commands": [
+        "editor.action.clipboardCopyAction",
+        "workbench.action.replaceInFiles",
+        "editor.action.clipboardPasteAction",
+        "search.action.focusSearchList",
+        "list.focusDown"
+      ]
+    },
+    "command": "runCommands",
+    "key": "shift+alt+h",
+    "when": "editorTextFocus"
+  }
+]

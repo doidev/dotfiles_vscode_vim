@@ -1,0 +1,357 @@
+{
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "editor.suggest.insertMode": "replace"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[search-result]": {
+    "editor.lineNumbers": "off"
+  },
+  "breadcrumbs.enabled": false,
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorStyle": "line-thin",
+  "editor.cursorWidth": 4,
+  "editor.fontFamily": "'JetBrains Mono', Hack, Cascadia Code, Hack, Fira Code, Inconsolata",
+  "editor.fontLigatures": false,
+  "editor.fontSize": 13,
+  "editor.fontWeight": "300",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": false,
+  "editor.linkedEditing": true,
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "all",
+  "editor.stickyScroll.enabled": true,
+  "editor.suggest.insertMode": "replace",
+  "editor.suggestSelection": "first",
+  "editor.tabSize": 2,
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 220,
+  "editor.codeActionsOnSave": {
+    "source.addMissingImports": true,
+    "source.organizeImports": true
+  },
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
+  },
+  "explorer.confirmDragAndDrop": false,
+  "extensions.ignoreRecommendations": true,
+  "gitlens.mode.active": "zen",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "update.showReleaseNotes": false,
+  "vim.easymotion": true, // <leader>m and <leader>M
+  "vim.easymotionMarkerBackgroundColor": "#fff",
+  "vim.easymotionMarkerForegroundColorOneChar": "#007",
+  "vim.colorcolumn": "#f58",
+  /*   vim set up beginning */
+  "vim.foldfix": true, // zc to fold, zo to unfold, zM fold all, zR unfold all. Select mode cursor move over fold
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false
+  },
+  "vim.highlightedyank.color": "#f58",
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.textColor": "white",
+  "vim.hlsearch": true,
+  "vim.incsearch": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "after": [
+        "<Esc>"
+      ],
+      "before": [
+        "j",
+        "k"
+      ]
+    },
+    {
+      "after": [
+        "<Esc>"
+      ],
+      "before": [
+        "j",
+        "j"
+      ]
+    },
+    {
+      "after": [
+        "<Esc>"
+      ],
+      "before": [
+        "<C-j>"
+      ]
+    },
+    {
+      "after": [
+        "<Esc>"
+      ],
+      "before": [
+        "<C-k>"
+      ]
+    }
+  ],
+  "vim.leader": "<space>",
+  "vim.normalModeKeyBindings": [
+    {
+      "before": [
+        "<tab>"
+      ],
+      "commands": [
+        "workbench.action.nextEditor"
+      ]
+    },
+    {
+      "before": [
+        "<S-tab>"
+      ],
+      "commands": [
+        "workbench.action.previousEditor"
+      ]
+    },
+    {
+      "before": [
+        "<Esc>"
+      ],
+      "commands": [
+        ":nohl"
+      ]
+    },
+    {
+      "before": ["<leader>", "w"],
+      "commands": [":vsp"] // split vertical
+    },
+    {
+      "before": [
+        "<leader>",
+        "p"
+      ],
+      "commands": [
+        "workbench.action.quickOpen"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "f"
+      ],
+      "commands": [
+        "workbench.view.search"
+      ] // show search, F4/Shift+F4 to focus next/previous search result
+    },
+    {
+      "before": [
+        "<leader>",
+        "t"
+      ],
+      "commands": [
+        "workbench.action.terminal.new"
+      ] // new terminal, toggle terminal and move between terminal in keybindings.json
+    },
+    {
+      "after": [
+        "^"
+      ], // move to beginning of the line
+      "before": [
+        "<leader>",
+        "h"
+      ]
+    },
+    {
+      "after": [
+        "$"
+      ], // move to the end of the line
+      "before": [
+        "<leader>",
+        "l"
+      ]
+    },
+    {
+      "after": [
+        "g",
+        "j"
+      ], // wraptext move down each line
+      "before": [
+        "j"
+      ]
+    },
+    {
+      "after": [
+        "g",
+        "k"
+      ], //wraptext move up each line
+      "before": [
+        "k"
+      ]
+    },
+    // {
+    //   "before": ["J"],
+    //   "commands": ["scrollPageDown"]
+    // },
+    // {
+    //   "before": ["K"],
+    //   "commands": ["scrollPageUp"]
+    // },
+    // Move Cursor Up or Down Multiple Lines at once in VS Code in keybindings.json
+    // https://stackoverflow.com/questions/70561889/move-cursor-up-or-down-multiple-lines-at-once-in-vs-code
+    {
+      "before": [
+        "<leader>",
+        "j"
+      ],
+      "commands": [
+        "editor.action.jumpToBracket"
+      ] // match bracket (), {}, []
+    },
+    {
+      "before": [
+        "<leader>",
+        "k"
+      ],
+      "commands": [
+        "editor.emmet.action.matchTag"
+      ] // match tag in html
+    },
+    {
+      "before": [
+        "<leader>",
+        "s"
+      ],
+      "commands": [
+        "workbench.action.files.saveAll"
+      ]
+    },
+    {
+      "after": [
+        "<leader>",
+        "<leader>",
+        "w"
+      ], // vim motion forward
+      "before": [
+        "<leader>",
+        "m"
+      ]
+    },
+    {
+      "after": [
+        "<leader>",
+        "<leader>",
+        "b"
+      ], // vim motion backward
+      "before": [
+        "<leader>",
+        "M"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "q"
+      ], // close active window split
+      "commands": [
+        "workbench.action.closeActiveEditor"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "r"
+      ], // quickopendrecently files
+      "commands": [
+        "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "c",
+        "a"
+      ],
+      "commands": [
+        "editor.action.quickFix"
+      ]
+    }
+  ],
+  "vim.searchMatchColor": "#1becf0",
+  "vim.searchMatchTextColor": "#000000",
+  "vim.showmodename": true,
+  "vim.smartRelativeLine": true,
+  "vim.sneak": true, // type s then next 2 character for next find, type S for backward find 2 characters example ssu next match by press ;
+  "vim.surround": true, //ysiw" or cs"'
+  "vim.useCtrlKeys": true,
+  "vim.useSystemClipboard": true,
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<leader>",
+        "s"
+      ],
+      "commands": [
+        "workbench.action.files.saveAll"
+      ]
+    },
+    // Stay in visual mode while indenting
+    {
+      "before": [
+        "<"
+      ],
+      "commands": [
+        "editor.action.outdentLines"
+      ]
+    },
+    {
+      "before": [
+        ">"
+      ],
+      "commands": [
+        "editor.action.indentLines"
+      ]
+    },
+    {
+      "before": [
+        "J"
+      ],
+      "commands": [
+        "editor.action.moveLinesDownAction"
+      ]
+    },
+    {
+      "before": [
+        "K"
+      ],
+      "commands": [
+        "editor.action.moveLinesUpAction"
+      ]
+    }
+  ],
+  /* end vscode vim set up  */
+  "workbench.colorTheme": "Dracula",
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.startupEditor": "newUntitledFile",
+  "zenMode.hideLineNumbers": false,
+  "window.menuBarVisibility": "toggle",
+  // "workbench.colorCustomizations": {
+  //     "editorRuler.foreground": "#ff4081"
+  // },
+  "workbench.activityBar.visible": false,
+  "editor.rulers": [
+    80, 160
+  ]
+}
