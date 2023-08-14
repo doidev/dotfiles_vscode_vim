@@ -293,7 +293,7 @@
   "vim.showmodename": true,
   "vim.smartRelativeLine": true,
   "vim.sneak": true, // type s then next 2 character for next find, type S for backward find 2 characters example ssu next match by press ;
-  "vim.surround": true, // delete(ds), change (cs), add (y) sourround object. Example: ds" or ysiw" or cs"'. https://github.com/tpope/vim-surround 
+    "vim.surround": true, // delete(ds), change (cs), add (y) sourround object. Example: ds" or ysiw" or cs"'. For most case in visual mode press captial S then add sourround. https://github.com/tpope/vim-surround 
   "vim.useCtrlKeys": true,
   "vim.useSystemClipboard": true,
   "vim.visualModeKeyBindingsNonRecursive": [
